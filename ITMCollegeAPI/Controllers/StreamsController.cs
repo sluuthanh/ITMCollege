@@ -80,7 +80,7 @@ namespace ITMCollegeAPI.Controllers
             _context.Streams.Add(stream);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetStream", new { id = stream.StreamId }, stream);
+            return StatusCode(201);
         }
 
         // DELETE: api/Streams/5

@@ -80,7 +80,7 @@ namespace ITMCollegeAPI.Controllers
             _context.Fields.Add(@field);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetField", new { id = @field.FieldId }, @field);
+            return StatusCode(201);
         }
 
         // DELETE: api/Fields/5
